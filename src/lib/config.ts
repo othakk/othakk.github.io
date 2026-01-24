@@ -47,7 +47,7 @@ export interface ProjectItem {
 // 2. PERSONAL DETAILS & LINKS
 // =================================================================================
 
-export const BANNER_IMAGE = "https://cdn.discordapp.com/attachments/1346582212983918642/1449929873643536446/IMG_20250915_175942771.jpg?ex=6940afec&is=693f5e6c&hm=c9c6fb703d01193df0a555a5e5bd29f41db98665161eea43e4c7a68c24a4c365&";
+export const BANNER_IMAGE = "https://cdn.discordapp.com/attachments/1346582212983918642/1464615727267844188/f8eaea684e07e14a171d7f10f7336d58.jpg?ex=69761d30&is=6974cbb0&hm=bcb0dcefb398026d8951117503d22c77888c58b71935941f78cac65f117fbf91&";
 
 // External Links
 export const RESUME_URL = "https://drive.google.com/file/d/1WKa36vE76iBqOAcucFTeVxGwsFmSim9g/view?usp=drive_link";
