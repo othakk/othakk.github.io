@@ -67,16 +67,12 @@ export default function ContactForm() {
 
   return (
     <div className="min-h-screen w-full bg-background text-foreground flex flex-col items-center justify-center px-4 py-12">
-      <Return
-        href="/"
-        label="return"
-        className="absolute top-6 left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:mb-8"
-      />
+      <Return href="/" label="return" className="mb-10" />
 
       <form
         onSubmit={handleSubmit}
         noValidate
-        className="w-full max-w-md flex flex-col gap-5"
+        className="w-full max-w-lg flex flex-col gap-6"
       >
         <BotMessage delay={0.1}>
           hello. i&apos;m listening. who is this?
@@ -92,7 +88,7 @@ export default function ContactForm() {
                 setFormData({ ...formData, name: e.target.value })
                 if (errors.name) setErrors({ ...errors, name: undefined })
               }}
-              className="h-auto w-full border-none bg-transparent px-0 py-0 text-right shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/40"
+              className="h-auto w-full border-none bg-transparent px-0 py-0 text-right text-base shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/40"
               autoComplete="off"
               disabled={isSuccess}
             />
@@ -101,7 +97,7 @@ export default function ContactForm() {
             <motion.span
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[10px] text-red-400 mt-1 mr-1 font-mono"
+              className="text-xs text-red-400 mt-1 mr-2 font-mono"
             >
               * {errors.name}
             </motion.span>
@@ -112,7 +108,7 @@ export default function ContactForm() {
 
         <div className="w-full flex flex-col items-end">
           <UserMessage delay={0.4}>
-            <div className="flex items-center justify-end gap-2 w-full">
+            <div className="flex items-center justify-end gap-3 w-full">
               <Input
                 type="email"
                 placeholder="email (optional) ..."
@@ -121,18 +117,18 @@ export default function ContactForm() {
                   setFormData({ ...formData, email: e.target.value })
                   if (errors.email) setErrors({ ...errors, email: undefined })
                 }}
-                className="h-auto w-full border-none bg-transparent px-0 py-0 text-right shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/40"
+                className="h-auto w-full border-none bg-transparent px-0 py-0 text-right text-base shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/40"
                 autoComplete="off"
                 disabled={isSuccess}
               />
-              <Mail className="w-3 h-3 text-muted-foreground/50 shrink-0" />
+              <Mail className="w-4 h-4 text-muted-foreground/50 shrink-0" />
             </div>
           </UserMessage>
           {errors.email && (
             <motion.span
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[10px] text-red-400 mt-1 mr-1 font-mono"
+              className="text-xs text-red-400 mt-1 mr-2 font-mono"
             >
               * {errors.email}
             </motion.span>
@@ -142,7 +138,7 @@ export default function ContactForm() {
         <BotMessage delay={0.5}>alright. what&apos;s on your mind?</BotMessage>
 
         <div className="w-full flex flex-col items-end">
-          <UserMessage delay={0.6} className="min-h-[100px]">
+          <UserMessage delay={0.6} className="min-h-[120px]">
             <textarea
               placeholder="write your query ..."
               value={formData.message}
@@ -151,7 +147,7 @@ export default function ContactForm() {
                 if (errors.message)
                   setErrors({ ...errors, message: undefined })
               }}
-              className="w-full h-full bg-transparent border-none outline-none text-right resize-none placeholder:text-muted-foreground/40 py-1 text-sm font-medium"
+              className="w-full h-full bg-transparent border-none outline-none text-right resize-none placeholder:text-muted-foreground/40 py-1 text-base font-medium leading-relaxed"
               disabled={isSuccess}
             />
           </UserMessage>
@@ -159,7 +155,7 @@ export default function ContactForm() {
             <motion.span
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[10px] text-red-400 mt-1 mr-1 font-mono"
+              className="text-xs text-red-400 mt-1 mr-2 font-mono"
             >
               * {errors.message}
             </motion.span>
@@ -179,23 +175,23 @@ export default function ContactForm() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: 0.7 }}
-              className="flex justify-end mt-2"
+              className="flex justify-end mt-4"
               key="submit-btn"
             >
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="rounded-lg rounded-tr-sm h-12 px-6 shadow-lg shadow-primary/10 gap-2 group"
+                className="rounded-xl rounded-tr-sm h-14 px-8 text-base shadow-lg shadow-primary/10 gap-3 group"
               >
                 {isSubmitting ? (
                   <>
                     <span>sending</span>
-                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <Loader2 className="w-5 h-5 animate-spin" />
                   </>
                 ) : (
                   <>
                     <span>send message</span>
-                    <Send className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <Send className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </>
                 )}
               </Button>
@@ -221,16 +217,16 @@ function BotMessage({
       transition={{ delay, type: "spring", stiffness: 200, damping: 20 }}
       className="flex items-end gap-3 self-start max-w-[90%]"
     >
-      <div className="w-10 h-10 shrink-0">
+      <div className="w-11 h-11 shrink-0">
         <Image
           src="/avatar/avatar.png"
           alt="bot"
-          width={40}
-          height={40}
+          width={44}
+          height={44}
           className="object-contain w-full h-full drop-shadow-sm"
         />
       </div>
-      <div className="bg-card/50 border border-border/50 px-4 py-3 rounded-lg rounded-bl-none text-sm text-foreground/90 shadow-sm">
+      <div className="bg-card/50 border border-border/50 px-5 py-4 rounded-xl rounded-bl-none text-base text-foreground/90 shadow-sm leading-relaxed">
         {children}
       </div>
     </motion.div>
@@ -256,8 +252,8 @@ function UserMessage({
       <div
         className={`
         bg-primary/5 border border-primary/10 
-        px-4 py-3 rounded-lg rounded-br-none 
-        text-sm text-foreground shadow-sm w-full
+        px-5 py-4 rounded-xl rounded-br-none 
+        text-base text-foreground shadow-sm w-full
         focus-within:bg-primary/10 focus-within:border-primary/20 transition-colors
         ${className}
       `}

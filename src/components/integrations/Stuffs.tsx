@@ -250,7 +250,7 @@ export function StuffsGrid({ trakt, mal }: StuffsGridProps) {
         )}
 
         <motion.div variants={item} className="md:col-span-2 pt-8">
-          <div className="flex items-center gap-3 mb-6 px-1">
+          <div className="flex items-center gap-3 mb-6">
             <Gamepad2 className="w-5 h-5 text-primary" />
             <div>
               <h3 className="text-sm font-medium leading-none">Games I Play</h3>
@@ -276,7 +276,7 @@ export function StuffsGrid({ trakt, mal }: StuffsGridProps) {
         </motion.div>
 
         <motion.div variants={item} className="md:col-span-2 pt-8">
-          <div className="flex items-center gap-3 mb-8 px-1">
+          <div className="flex items-center gap-3 mb-8">
             <SiYoutube className="w-5 h-5 text-[#FF0000]" />
             <span className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
               Playlists
@@ -289,7 +289,7 @@ export function StuffsGrid({ trakt, mal }: StuffsGridProps) {
                 key={list.url}
                 href={list.url}
                 target="_blank"
-                className="group flex flex-col sm:flex-row gap-6 items-start sm:items-center p-2 rounded-lg transition-all duration-300 hover:bg-white/5"
+                className="group flex flex-col sm:flex-row gap-6 items-start sm:items-center p-2 -ml-2 rounded-lg"
               >
                 <div className="relative w-full sm:w-48 aspect-video shrink-0 rounded-lg overflow-hidden bg-muted shadow-sm ring-1 ring-border/50">
                   <Image
@@ -298,7 +298,7 @@ export function StuffsGrid({ trakt, mal }: StuffsGridProps) {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute inset-0 bg-black/30 sm:bg-black/40 flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
                       <Play className="w-4 h-4 text-white fill-white ml-0.5" />
                     </div>

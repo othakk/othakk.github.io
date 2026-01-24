@@ -32,12 +32,7 @@ export function Hero() {
               >
                 /stuffs
               </Link>
-              <Link
-                href="/gist"
-                className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
-              >
-                /gist
-              </Link>
+
               <Link
                 href="/what"
                 className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
@@ -49,6 +44,13 @@ export function Hero() {
                 className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
               >
                 /contact
+              </Link>
+              <Link
+                target="blank"
+                href="/gist"
+                className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
+              >
+                /gist
               </Link>
             </nav>
           </nav>
@@ -120,10 +122,9 @@ export function Hero() {
 
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed mb-8">
             A code <span className="highlight-text">alchemist ⚗️</span> building
-            things and turning ideas into products.
-            I make apps, websites and extensions,{" "}
-            <span className="highlight-text">experiment a lot</span>, break
-            stuff on purpose and ship what’s{" "}
+            things and turning ideas into products. I make apps, websites and
+            extensions, <span className="highlight-text">experiment a lot</span>
+            , break stuff on purpose and ship what’s{" "}
             <span className="highlight-text">actually useful</span>.
           </p>
 

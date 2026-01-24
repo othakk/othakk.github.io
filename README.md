@@ -193,9 +193,7 @@ src/
 └─ lib/
    ├─ config.ts                           # content & links
    ├─ site-config.ts                      # metadata/SEO
-   ├─ gist.ts                             # gist links
-   ├─ gist-contributor.ts                 # gist contributos
-   ├─ stuffs.ts                 # spotify, yt playlist cover images
+   ├─ stuffs.ts                           # spotify, yt playlist cover images
    └─ utils.ts
 ```
 

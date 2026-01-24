@@ -192,6 +192,10 @@ export default function Vibing() {
       )}
 
       <div className="relative w-full max-w-4xl flex flex-col items-center justify-center min-h-[500px]">
+        <div className="mb-8 z-50">
+          <Return href="/" label="return" />
+        </div>
+
         <AnimatePresence mode="popLayout">
           {hasEntered ? (
             <motion.div
@@ -201,11 +205,7 @@ export default function Vibing() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="absolute top-0 left-0 w-full flex justify-center -mt-20">
-                <Return />
-              </div>
-
-              <div className="relative h-72 w-72 md:h-96 md:w-96 flex items-center justify-center my-8">
+              <div className="relative h-72 w-72 md:h-96 md:w-96 flex items-center justify-center mb-8 mt-4">
                 <AnimatePresence mode="wait">
                   {showAngryState ? (
                     <motion.div
