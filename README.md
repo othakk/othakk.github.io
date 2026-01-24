@@ -8,7 +8,7 @@ Real-time Discord presence, Spotify/Trakt.tv/MyAnimeList integration, useful gis
 
 <br/>
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/gWRxxKcWDZ)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/wG9qpfvuQQ)
 
 </div>
 
