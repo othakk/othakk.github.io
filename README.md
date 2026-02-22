@@ -171,6 +171,8 @@ src/
 │  │  └─ spotify/now-playing/route.ts
 │  │  └─ stuffs/api.ts
 │  ├─ contact/page.tsx                    # wraps ContactForm
+│  ├─ donate/page.tsx                     # donation page
+│  ├─ donate/thanks/page.tsx              # post-donation thank you
 │  ├─ resume/page.tsx                     # wraps ResumeViewer
 │  ├─ ty/page.tsx                         # thank-you screen
 │  ├─ what/page.tsx                       # Slide to Vibe page
@@ -185,6 +187,7 @@ src/
 │  ├─ integrations/                       # DiscordPresenceDot, NowPlaying, GithubActivityCard, Stuffs
 │  ├─ vibe/                               # Vibing, SlideToVibeButton
 │  ├─ contact/                            # ContactForm
+│  ├─ donate/                             # DonateContent, DonateThanks
 │  ├─ gist/                               # GistList
 │  └─ ui/                                 # Button, Input, Return, ResumeViewer, TimeDisplay, ThankYouContent
 ├─ hooks/
@@ -196,6 +199,23 @@ src/
    ├─ stuffs.ts                           # spotify, yt playlist cover images
    └─ utils.ts
 ```
+
+---
+
+## 🗑️ Removing the Donate Page
+
+The `/donate` page is specific to me. If you're forking this repo, you'll likely want to remove it:
+
+1. Delete these directories:
+   ```bash
+   rm -rf src/app/donate
+   rm -rf src/app/api/donate
+   rm -rf src/components/donate
+   ```
+
+2. Remove any links to `/donate` from your site (e.g. in `src/lib/config.ts` or navigation)
+
+That's it — no other files depend on the donate feature.
 
 ---
 
