@@ -186,29 +186,34 @@ export default function DonateContent() {
                     exit="exit"
                     className="overflow-hidden"
                   >
-                    <div className="mt-4 pt-4 border-t border-border/30 space-y-2.5">
-                      {WISE_DETAILS.map((item) => (
-                        <div key={item.label} className="flex justify-between items-center text-xs">
-                          <span className="text-muted-foreground">{item.label}</span>
-                          <span className="text-foreground font-medium font-mono">{item.value}</span>
+                    <div className="mt-4 pt-4 border-t border-border/30 space-y-3">
+                      <a
+                        href="https://www.youtube.com/watch?v=gwD7VsqcHsY"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="group/video flex items-center gap-3 rounded-lg bg-primary/[0.06] border border-primary/15 px-3.5 py-2.5 hover:bg-primary/10 hover:border-primary/25 transition-all duration-200"
+                      >
+                        <div className="w-7 h-7 rounded-full bg-primary/15 flex items-center justify-center shrink-0 group-hover/video:bg-primary/25 transition-colors">
+                          <Play className="w-3 h-3 fill-primary text-primary ml-0.5" />
                         </div>
-                      ))}
+                        <div>
+                          <div className="text-xs font-medium text-primary">watch instruction video</div>
+                          <div className="text-[10px] text-muted-foreground">step-by-step guide for Wise transfer</div>
+                        </div>
+                      </a>
 
-                      <div className="pt-2">
-                        <a
-                          href="https://www.youtube.com/watch?v=gwD7VsqcHsY"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="group/video inline-flex items-center gap-2 text-xs text-primary hover:text-primary/80 transition-colors"
-                        >
-                          <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center group-hover/video:bg-primary/20 transition-colors">
-                            <Play className="w-2.5 h-2.5 fill-primary text-primary" />
-                          </div>
-                          <span className="underline underline-offset-4 decoration-primary/30 group-hover/video:decoration-primary/60 transition-colors">
-                            watch instruction video
-                          </span>
-                        </a>
+                      <div className="rounded-lg border border-border/40 bg-card/30 divide-y divide-border/30 overflow-hidden">
+                        {WISE_DETAILS.map((item) => (
+                          <CopyRow
+                            key={item.label}
+                            label={item.label}
+                            value={item.value}
+                            copyKey={`wise-${item.label}`}
+                            copiedKey={copiedKey}
+                            onCopy={copyText}
+                          />
+                        ))}
                       </div>
                     </div>
                   </motion.div>
@@ -359,6 +364,61 @@ export default function DonateContent() {
           </Button>
         </motion.div>
       </motion.div>
+    </div>
+  );
+}
+
+function CopyRow({
+  label,
+  value,
+  copyKey,
+  copiedKey,
+  onCopy,
+}: {
+  label: string;
+  value: string;
+  copyKey: string;
+  copiedKey: string | null;
+  onCopy: (text: string, key: string) => void;
+}) {
+  const isCopied = copiedKey === copyKey;
+  return (
+    <div
+      onClick={(e) => {
+        e.stopPropagation();
+        onCopy(value, copyKey);
+      }}
+      className="group/row flex items-center justify-between gap-3 px-3.5 py-2.5 cursor-pointer hover:bg-primary/[0.03] transition-colors"
+    >
+      <span className="text-[11px] text-muted-foreground shrink-0">{label}</span>
+      <div className="flex items-center gap-2 min-w-0">
+        <span className="text-xs font-mono text-foreground truncate">{value}</span>
+        <AnimatePresence mode="wait" initial={false}>
+          {isCopied ? (
+            <motion.span
+              key="check"
+              initial={{ opacity: 0, rotate: -90 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="shrink-0"
+            >
+              <Check className="w-3 h-3 text-emerald-400" />
+            </motion.span>
+          ) : (
+            <motion.span
+              key="copy"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.12 }}
+              className="shrink-0 group-hover/row:!opacity-50 transition-opacity"
+            >
+              <Copy className="w-3 h-3 text-muted-foreground" />
+            </motion.span>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
