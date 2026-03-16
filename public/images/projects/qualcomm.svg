@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#1a1a2e"/>
+  <!-- Brain/AI icon representing AI coaching + pose estimation -->
+  <g transform="translate(100,95)" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Brain outline left -->
+    <path d="M-5,30 C-5,30 -40,25 -40,0 C-40,-15 -30,-28 -20,-30 C-18,-42 -5,-45 0,-45 C5,-45 18,-42 20,-30 C30,-28 40,-15 40,0 C40,25 5,30 5,30"/>
+    <!-- Brain middle line -->
+    <line x1="0" y1="-45" x2="0" y2="30"/>
+    <!-- Brain folds -->
+    <path d="M0,-20 C-15,-20 -25,-10 -25,0"/>
+    <path d="M0,-20 C15,-20 25,-10 25,0"/>
+    <path d="M0,5 C-15,5 -25,15 -25,22"/>
+    <path d="M0,5 C15,5 25,15 25,22"/>
+  </g>
+  <!-- Signal dots -->
+  <circle cx="55" cy="145" r="4" fill="#7c3aed" opacity="0.5"/>
+  <circle cx="100" cy="155" r="4" fill="#7c3aed" opacity="0.7"/>
+  <circle cx="145" cy="145" r="4" fill="#7c3aed" opacity="0.5"/>
+  <text x="100" y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed" opacity="0.8">AI COACH</text>
+</svg>

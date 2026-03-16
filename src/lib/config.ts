@@ -107,7 +107,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     date: "Jan 2026 – Present",
     description:
       "Built a real-time property marketplace with PostgreSQL on Railway, JWT-authenticated REST APIs, and an async ETL pipeline for 250+ university campuses with sub-second API latency.",
-    logo: "/images/companies/homey.png",
+    logo: "/images/companies/homey.svg",
   },
   {
     company: "Polaris Inc.",
@@ -115,7 +115,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     date: "Jun 2025 – Aug 2025",
     description:
       "Developed a React Native app for real-time equipment tracking, built .NET REST APIs with PostgreSQL integration, and engineered a data validation pipeline processing thousands of records daily.",
-    logo: "/images/companies/polaris.png",
+    logo: "/images/companies/polaris.svg",
   },
   {
     company: "Polaris Inc.",
@@ -123,7 +123,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     date: "May 2024 – Aug 2024",
     description:
       "Refactored C# backend email validation with unit tests, executed frontend localization for multilingual support, and conducted A/B tests with custom debugging utilities.",
-    logo: "/images/companies/polaris.png",
+    logo: "/images/companies/polaris.svg",
   },
 ];
 
@@ -136,7 +136,7 @@ export const EDUCATION: EducationItem[] = [
     institution: "University of Wisconsin–Madison",
     degree: "B.S. Computer Science, Minor in Entrepreneurship — GPA 3.4",
     period: "Expected May 2026",
-    logo: "/images/education/uw.png",
+    logo: "/images/education/uw.svg",
   },
 ];
 
@@ -151,7 +151,7 @@ export const PROJECTS: ProjectItem[] = [
       "AI-powered public speaking coach using pose estimation, gaze detection, and on-device inference with QAIRT, ONNX Runtime & LiteRT.",
     url: "",
     repo: "",
-    image: "/images/projects/qualcomm.png",
+    image: "/images/projects/qualcomm.svg",
   },
   {
     name: "Project Irona",
@@ -159,7 +159,7 @@ export const PROJECTS: ProjectItem[] = [
       "Low-latency voice automation system integrating speech-to-text, LLMs, and IoT APIs with NLP for multi-step task recognition.",
     url: "",
     repo: "",
-    image: "/images/projects/irona.png",
+    image: "/images/projects/irona.svg",
   },
   {
     name: "UW Path Finder",
@@ -167,6 +167,6 @@ export const PROJECTS: ProjectItem[] = [
       "Campus navigation app using Dijkstra's algorithm to find shortest walking paths between UW buildings with estimated times.",
     url: "",
     repo: "",
-    image: "/images/projects/pathfinder.png",
+    image: "/images/projects/pathfinder.svg",
   },
 ];

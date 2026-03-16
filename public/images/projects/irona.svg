@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#1a1a2e"/>
+  <!-- Microphone icon -->
+  <g transform="translate(100,100)" fill="none" stroke="#06b6d4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-15" y="-45" width="30" height="55" rx="15" fill="#06b6d4" opacity="0.2" stroke="#06b6d4"/>
+    <path d="M-30,0 C-30,25 -5,40 0,40 C5,40 30,25 30,0"/>
+    <line x1="0" y1="40" x2="0" y2="55"/>
+    <line x1="-15" y1="55" x2="15" y2="55"/>
+  </g>
+  <!-- Sound waves -->
+  <g fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" opacity="0.5">
+    <path d="M140,80 C150,90 150,110 140,120"/>
+    <path d="M150,70 C165,85 165,115 150,130"/>
+    <path d="M60,80 C50,90 50,110 60,120"/>
+    <path d="M50,70 C35,85 35,115 50,130"/>
+  </g>
+  <text x="100" y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#06b6d4" opacity="0.8">VOICE AI</text>
+</svg>

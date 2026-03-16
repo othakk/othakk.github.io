@@ -4,6 +4,31 @@ import { EXPERIENCE } from "@/lib/config";
 import { staggerContainer, staggerItem, viewport } from "@/lib/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+
+function LogoWithFallback({ src, alt }: { src: string; alt: string }) {
+  const [error, setError] = useState(false);
+
+  if (error || !src) {
+    return (
+      <div className="h-5 w-5 rounded-sm bg-primary/10 flex items-center justify-center text-[10px] font-bold text-primary">
+        {alt.charAt(0)}
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative h-5 w-5 overflow-hidden rounded-sm">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-contain"
+        onError={() => setError(true)}
+      />
+    </div>
+  );
+}
 
 export function ExperienceList() {
   return (
@@ -39,14 +64,7 @@ export function ExperienceList() {
                   <span className="text-muted-foreground text-xs">at</span>
 
                   <span className="inline-flex items-center gap-2 text-foreground font-semibold">
-                    <div className="relative h-5 w-5 overflow-hidden rounded-sm">
-                      <Image
-                        src={job.logo}
-                        alt={job.company}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
+                    <LogoWithFallback src={job.logo} alt={job.company} />
                     {job.company}
                   </span>
                 </h3>

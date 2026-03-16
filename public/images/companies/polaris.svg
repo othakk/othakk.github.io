@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="20" fill="#003B6F"/>
+  <!-- Polaris star -->
+  <polygon points="100,30 112,75 160,75 120,105 135,150 100,122 65,150 80,105 40,75 88,75" fill="#ffffff"/>
+  <!-- P letter -->
+  <text x="100" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="#ffffff" opacity="0.9">POLARIS</text>
+</svg>
