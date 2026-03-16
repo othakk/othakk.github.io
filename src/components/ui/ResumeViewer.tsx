@@ -34,9 +34,9 @@ export default function ResumeViewer() {
             rel="noopener noreferrer"
             tabIndex={-1}
           >
-            <Button 
-              variant="outline" 
-              size="sm" 
+            <Button
+              variant="outline"
+              size="sm"
               className="gap-2 rounded-lg border-border/50 hover:bg-primary/5 hover:border-primary/30"
             >
               <ExternalLink className="w-3.5 h-3.5" />
@@ -46,8 +46,7 @@ export default function ResumeViewer() {
 
           <a
             href={RESUME_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            download="Om_Thakkar_Resume.pdf"
             tabIndex={-1}
           >
             <Button
@@ -69,10 +68,10 @@ export default function ResumeViewer() {
       >
         <h1 className="text-2xl md:text-3xl font-medium tracking-tight flex items-center gap-3 text-foreground">
           <FileText className="w-6 h-6 md:w-8 md:h-8 text-primary/50" />
-          <span>the paper trail</span>
+          <span>resume</span>
         </h1>
         <p className="text-sm text-muted-foreground">
-          buzzwords arranged in a pleasing geometric pattern.
+          the highlights, neatly arranged.
         </p>
       </motion.div>
 
@@ -92,20 +91,9 @@ export default function ResumeViewer() {
         <iframe
           src={embedUrl}
           className="w-full h-full border-none"
-          allow="autoplay"
           title="Resume PDF"
         />
       </motion.div>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="text-center text-xs text-muted-foreground/40 font-mono"
-      >
-        * if the embed doesn&apos;t load, use the buttons above. google drive is
-        moody.
-      </motion.p>
     </Container>
   );
 }

@@ -47,7 +47,7 @@ export interface ProjectItem {
 
 export const BANNER_IMAGE = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80";
 
-export const RESUME_URL = "";
+export const RESUME_URL = "/resume.pdf";
 export const DISCORD_LINK = "";
 export const CAL_URL = "";
 
