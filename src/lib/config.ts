@@ -1,20 +1,18 @@
 import {
-  SiFacebook,
-  SiFirebase,
-  SiGithub,
-  SiInstagram,
-  SiLinkedin,
-  SiExpress,
-  SiGit,
+  SiPython,
   SiJavascript,
-  SiNextdotjs,
-  SiNodedotjs,
+  SiCplusplus,
   SiReact,
-  SiTailwindcss,
-  SiTypescript,
-  SiUnrealengine,
-  SiX,
+  SiFlask,
+  SiDotnet,
+  SiPostgresql,
+  SiGit,
+  SiJira,
+  SiGithub,
 } from "react-icons/si";
+import { FaJava, FaHtml5, FaLinkedin, FaAws } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
+import { Mail } from "lucide-react";
 
 // =================================================================================
 // 1. TYPES & INTERFACES
@@ -47,47 +45,34 @@ export interface ProjectItem {
 // 2. PERSONAL DETAILS & LINKS
 // =================================================================================
 
-export const BANNER_IMAGE = "https://cdn.discordapp.com/attachments/1346582212983918642/1464618198560411796/0f2d21f97b23af771ab076d912343eb3.jpg?ex=69761f7d&is=6974cdfd&hm=5c2ad4f34ee74bfb40acc9bc1f5560fafd0a84d134020694ea8d5304720b7c14&";
+export const BANNER_IMAGE = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80";
 
-// External Links
-export const RESUME_URL = "https://drive.google.com/file/d/1WKa36vE76iBqOAcucFTeVxGwsFmSim9g/view?usp=drive_link";
-export const DISCORD_LINK = "https://discord.gg/wG9qpfvuQQ";
-export const CAL_URL = "https://cal.com/shahriaravi/15m";
+export const RESUME_URL = "";
+export const DISCORD_LINK = "";
+export const CAL_URL = "";
 
 // =================================================================================
 // 3. SOCIAL MEDIA
 // =================================================================================
 
 export const SOCIALS = [
-  { 
-    platform: "facebook", 
-    url: "https://facebook.com/shahriaravi", 
-    icon: SiFacebook, 
-    color: "#1877F2" 
+  {
+    platform: "linkedin",
+    url: "https://www.linkedin.com/in/omthak",
+    icon: FaLinkedin,
+    color: "#0A66C2",
   },
-  { 
-    platform: "instagram", 
-    url: "https://instagram.com/shahriaravi_", 
-    icon: SiInstagram, 
-    color: "#E1306C" 
+  {
+    platform: "github",
+    url: "https://github.com/othakk",
+    icon: SiGithub,
+    color: "#ffffff",
   },
-  { 
-    platform: "linkedin", 
-    url: "https://linkedin.com/in/shahriaravi", 
-    icon: SiLinkedin, 
-    color: "#0A66C2" 
-  },
-  { 
-    platform: "github", 
-    url: "https://github.com/shahriaravi", 
-    icon: SiGithub, 
-    color: "#ffffff" 
-  },
-  { 
-    platform: "x", 
-    url: "https://x.com/shahriaravi_", 
-    icon: SiX, 
-    color: "#ffffff" 
+  {
+    platform: "email",
+    url: "mailto:othakkar11@gmail.com",
+    icon: Mail,
+    color: "#EA4335",
   },
 ];
 
@@ -96,16 +81,19 @@ export const SOCIALS = [
 // =================================================================================
 
 export const STACK = [
+  { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "Java", icon: FaJava, color: "#ED8B00" },
+  { name: "C/C++", icon: SiCplusplus, color: "#00599C" },
+  { name: "C#", icon: TbBrandCSharp, color: "#239120" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "React Native", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
-  { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "Express", icon: SiExpress, color: "#FFFFFF" },
+  { name: "SQL/PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+  { name: "HTML/CSS", icon: FaHtml5, color: "#E34F26" },
+  { name: "React/React Native", icon: SiReact, color: "#61DAFB" },
+  { name: "Flask", icon: SiFlask, color: "#FFFFFF" },
+  { name: ".NET", icon: SiDotnet, color: "#512BD4" },
   { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "Unreal Engine", icon: SiUnrealengine, color: "#FFFFFF" },
+  { name: "AWS", icon: FaAws, color: "#FF9900" },
+  { name: "Jira", icon: SiJira, color: "#0052CC" },
 ];
 
 // =================================================================================
@@ -114,32 +102,28 @@ export const STACK = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    company: "Byontriq",
-    role: "Founder & SWE",
-    date: "2025 - Present",
-    description: "Building modern, minimal web & mobile apps.",
-    logo: "/logos/byontriq.png", 
+    company: "Homey",
+    role: "Founder / CEO",
+    date: "Jan 2026 – Present",
+    description:
+      "Built a real-time property marketplace with PostgreSQL on Railway, JWT-authenticated REST APIs, and an async ETL pipeline for 250+ university campuses with sub-second API latency.",
+    logo: "/images/companies/homey.png",
   },
   {
-    company: "EXEAIO",
-    role: "Project Manager",
-    date: "2023 - 2024",
-    description: "Led projects at a VR game studio.",
-    logo: "/images/companies/exeaio.png",
+    company: "Polaris Inc.",
+    role: "Software Engineering Intern — WMS Team",
+    date: "Jun 2025 – Aug 2025",
+    description:
+      "Developed a React Native app for real-time equipment tracking, built .NET REST APIs with PostgreSQL integration, and engineered a data validation pipeline processing thousands of records daily.",
+    logo: "/images/companies/polaris.png",
   },
   {
-    company: "Crisis Entertainment",
-    role: "Game Ops",
-    date: "2020 - 2023",
-    description: "Handled live operations at a video game development MNC.",
-    logo: "/images/companies/ce.png",
-  },
-  {
-    company: "GameExp",
-    role: "Editor",
-    date: "2022",
-    description: "Wrote and edited content about all things gaming.",
-    logo: "/images/companies/gxp.png",
+    company: "Polaris Inc.",
+    role: "Software Engineering Intern — Ecom Shop Team",
+    date: "May 2024 – Aug 2024",
+    description:
+      "Refactored C# backend email validation with unit tests, executed frontend localization for multilingual support, and conducted A/B tests with custom debugging utilities.",
+    logo: "/images/companies/polaris.png",
   },
 ];
 
@@ -149,16 +133,10 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const EDUCATION: EducationItem[] = [
   {
-    institution: "North South University",
-    degree: "Bachelor of Science – Biochemistry and Biotechnology",
-    period: "Dec 2025 – Dec 2029",
-    logo: "/images/education/nsu.webp",
-  },
-  {
-    institution: "Presidency University",
-    degree: "Bachelor of Science – Computer Science and Engineering",
-    period: "Jan 2025 – Aug 2025",
-    logo: "/images/education/pu.webp",
+    institution: "University of Wisconsin–Madison",
+    degree: "B.S. Computer Science, Minor in Entrepreneurship — GPA 3.4",
+    period: "Expected May 2026",
+    logo: "/images/education/uw.png",
   },
 ];
 
@@ -167,39 +145,28 @@ export const EDUCATION: EducationItem[] = [
 // =================================================================================
 
 export const PROJECTS: ProjectItem[] = [
-   {
-    name: "cooked-folio",
-    tagline: "A minimal, high-performance portfolio template aka this website.",
-    url: "https://yoavi.fun",
-    repo: "https://github.com/shahriaravi/cooked-folio",
-    image: "/avatar/avatar.png",
-  },
   {
-    name: "Mate",
-    tagline: "Private finance tracker app. No ads. Just beautiful design.",
-    url: "https://mate.byontriq.xyz",
-    repo: "https://github.com/shahriaravi/MateApp",
-    image: "/images/projects/mate.png",
-  },
-  {
-    name: "Byontriq",
-    tagline: "The central hub for our privacy-first apps and tools.",
-    url: "https://byontriq.xyz",
+    name: "Qualcomm Capstone",
+    tagline:
+      "AI-powered public speaking coach using pose estimation, gaze detection, and on-device inference with QAIRT, ONNX Runtime & LiteRT.",
+    url: "",
     repo: "",
-    image: "/images/projects/byontriq.svg",
+    image: "/images/projects/qualcomm.png",
   },
   {
-    name: "Terms Buddy",
-    tagline: "Browser extension that analyzes privacy policies for risks.",
-    url: "https://github.com/shahriaravi/terms-buddy",
+    name: "Project Irona",
+    tagline:
+      "Low-latency voice automation system integrating speech-to-text, LLMs, and IoT APIs with NLP for multi-step task recognition.",
+    url: "",
     repo: "",
-    image: "/images/projects/tb.png",
+    image: "/images/projects/irona.png",
   },
   {
-    name: "nothing-vscode-theme",
-    tagline: "High-contrast VS Code theme inspired by Nothing Tech.",
-    url: "https://marketplace.visualstudio.com/items?itemName=xexefe.nothing-os-theme",
-    repo: "https://github.com/shahriaravi/nothing-vscode-theme",
-    image: "/images/projects/nothing-theme.png",
+    name: "UW Path Finder",
+    tagline:
+      "Campus navigation app using Dijkstra's algorithm to find shortest walking paths between UW buildings with estimated times.",
+    url: "",
+    repo: "",
+    image: "/images/projects/pathfinder.png",
   },
 ];

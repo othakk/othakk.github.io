@@ -5,7 +5,6 @@ import { InitialSplash } from "@/components/common/InitialSplash";
 import { constructMetadata } from "@/lib/site-config";
 import { GeistMono } from "geist/font/mono";
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/next"
 
 export const viewport: Viewport = {
   themeColor: [
@@ -15,9 +14,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = constructMetadata({
-  title: "avi.portfolio",
-  description:
-    "software engineer & founder. fueled by caffeine, anime and production bugs.",
+  title: "Om Thakkar — Portfolio",
+  description: "CS student at UW-Madison. Founder @ Homey. Building things that matter.",
   icons: "/favicon.ico",
 });
 
@@ -34,7 +32,6 @@ export default function RootLayout({
         <Providers>
           <InitialSplash>{children}</InitialSplash>
         </Providers>
-        <Analytics />
       </body>
     </html>
   );

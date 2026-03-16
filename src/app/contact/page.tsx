@@ -2,8 +2,8 @@ import { constructMetadata } from "@/lib/site-config";
 import ContactForm from "../../components/contact/ContactForm";
 
 export const metadata = constructMetadata({
-  title: "talk to me",
-  description: "send memes, job offers, or debug help. i am listening.",
+  title: "Contact — Om Thakkar",
+  description: "Get in touch with Om Thakkar.",
 });
 
 export default function ContactPage() {

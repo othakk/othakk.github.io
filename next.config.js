@@ -1,18 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
   pageExtensions: ["js", "ts", "tsx"],
-
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "i.scdn.co", port: "", pathname: "/image/**" },
-      { protocol: "https", hostname: "cdn.discordapp.com" },
-      { protocol: "https", hostname: "avatars.githubusercontent.com" },
-      { protocol: "https", hostname: "github.com" },
-    ],
-    formats: ["image/webp"],
+    unoptimized: true,
   },
-
   reactStrictMode: true,
 };
 

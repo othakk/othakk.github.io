@@ -1,16 +1,12 @@
 "use client";
 
 import ThemeToggle from "@/components/common/ThemeToggle";
-import DiscordPresenceDot from "@/components/integrations/DiscordPresenceDot";
-import NowPlaying from "@/components/integrations/NowPlaying";
 import TimeDisplay from "@/components/ui/TimeDisplay";
-import { useDiscordPresence } from "@/hooks/useDiscordPresence";
-import { BANNER_IMAGE, DISCORD_LINK, SOCIALS } from "@/lib/config";
+import { BANNER_IMAGE, SOCIALS } from "@/lib/config";
 import { motion } from "framer-motion";
-import { Clock, Leaf } from "lucide-react";
+import { Clock, Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { SiDiscord } from "react-icons/si";
 
 const heroReveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -41,8 +37,6 @@ const staggerChild = {
 };
 
 export function Hero() {
-  const discordStatus = useDiscordPresence();
-
   return (
     <section className="relative mb-10 font-mono">
       <motion.div
@@ -58,19 +52,16 @@ export function Hero() {
 
         <div className="flex items-center justify-start sm:justify-end gap-4">
           <nav className="flex items-center gap-4 text-sm">
-            <nav className="flex items-center gap-4 text-sm">
-              {["/stuffs", "/what", "/contact", "/gist"].map((href) => (
-                <motion.span key={href} whileTap={{ scale: 0.95 }}>
-                  <Link
-                    href={href}
-                    target={href === "/gist" ? "blank" : undefined}
-                    className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
-                  >
-                    {href}
-                  </Link>
-                </motion.span>
-              ))}
-            </nav>
+            {["/contact", "/resume"].map((href) => (
+              <motion.span key={href} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href={href}
+                  className="hover:text-primary transition-colors underline decoration-wavy underline-offset-4 lowercase"
+                >
+                  {href}
+                </Link>
+              </motion.span>
+            ))}
           </nav>
 
           <ThemeToggle className="bg-transparent hover:bg-primary/10 text-muted-foreground hover:text-primary w-8 h-8 rounded-md transition-colors" />
@@ -106,17 +97,10 @@ export function Hero() {
           >
             <Image
               src="/avatar/avatar-full.png"
-              alt="avi"
+              alt="Om Thakkar"
               fill
               className="object-cover"
               priority
-            />
-          </div>
-
-          <div className="absolute -bottom-1 -right-1 z-20">
-            <DiscordPresenceDot
-              status={discordStatus}
-              className="w-5 h-5 md:w-6 md:h-6 border-[3px] border-background"
             />
           </div>
         </motion.div>
@@ -128,32 +112,22 @@ export function Hero() {
         >
           <motion.div variants={staggerChild} className="flex items-center gap-3 mb-3">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-              Shahriar Avi
+              Om Thakkar
             </h1>
-            <Leaf className="w-5 h-5 text-success fill-success/10 -rotate-12" />
+            <Rocket className="w-5 h-5 text-primary -rotate-12" />
           </motion.div>
 
           <motion.div variants={staggerChild} className="text-base md:text-lg text-muted-foreground mb-3 flex flex-wrap items-center gap-2">
-            <span>building things</span>
-            <a
-              href="https://byontriq.xyz"
-              target="_blank"
-              className="wavy-underline font-semibold text-primary hover:text-primary/80 transition-colors"
-            >
-              @Byontriq
-            </a>
-          </motion.div>
-
-          <motion.div variants={staggerChild} className="mb-6 mt-2">
-            <NowPlaying />
+            <span>CS @ UW-Madison</span>
+            <span className="text-border">|</span>
+            <span className="font-semibold text-primary">Founder @ Homey</span>
           </motion.div>
 
           <motion.p variants={staggerChild} className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed mb-8">
-            A code <span className="highlight-text">alchemist ⚗️</span> building
-            things and turning ideas into products. I make apps, websites and
-            extensions, <span className="highlight-text">experiment a lot</span>
-            , break stuff on purpose and ship what&apos;s{" "}
-            <span className="highlight-text">actually useful</span>.
+            Building <span className="highlight-text">real-time systems</span> and
+            turning ideas into products. Passionate about{" "}
+            <span className="highlight-text">AI/ML</span>, full-stack development,
+            and <span className="highlight-text">shipping things that matter</span>.
           </motion.p>
 
           <motion.div variants={staggerChild} className="flex flex-wrap items-center gap-5">
@@ -180,23 +154,6 @@ export function Hero() {
                 <social.icon className="w-5 h-5 md:w-6 md:h-6" />
               </motion.a>
             ))}
-
-            <div className="hidden sm:block w-px h-6 bg-border" />
-
-            <motion.a
-              href={DISCORD_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 font-medium text-foreground hover:text-primary transition-colors text-xs md:text-sm"
-              whileHover={{ x: 2, transition: { type: "spring", stiffness: 300, damping: 15 } }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <SiDiscord className="w-5 h-5 text-primary/80 group-hover:text-primary transition-colors" />
-              <span>Join Community</span>
-              <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary">
-                →
-              </span>
-            </motion.a>
           </motion.div>
         </motion.div>
       </div>
