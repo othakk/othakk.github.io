@@ -10,7 +10,7 @@ import { AnimatedSection } from "@/lib/animations";
 import { constructMetadata } from "@/lib/site-config";
 
 export const metadata = constructMetadata({
-  title: "Om Thakkar — Portfolio",
+  title: "Om Thakkar | Portfolio",
   description: "CS student at UW-Madison. Founder @ Homey. Building things that matter.",
 });
 

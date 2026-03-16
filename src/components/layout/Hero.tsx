@@ -118,9 +118,9 @@ export function Hero() {
           </motion.div>
 
           <motion.div variants={staggerChild} className="text-base md:text-lg text-muted-foreground mb-3 flex flex-wrap items-center gap-2">
-            <span>CS @ UW-Madison</span>
-            <span className="text-border">|</span>
             <span className="font-semibold text-primary">Founder @ Homey</span>
+            <span className="text-border">|</span>
+            <span>CS @ UW-Madison</span>
           </motion.div>
 
           <motion.p variants={staggerChild} className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed mb-8">

@@ -9,7 +9,7 @@ export default function TimeDisplay() {
     const updateTime = () => {
       const now = new Date();
       const zoned = new Date(
-        now.toLocaleString("en-US", { timeZone: "Asia/Dhaka" })
+        now.toLocaleString("en-US", { timeZone: "America/Chicago" })
       );
 
       const h24 = zoned.getHours();
@@ -34,7 +34,7 @@ export default function TimeDisplay() {
         {time}
       </span>
       <span className="text-[12px] text-muted-foreground tracking-normal">
-        // GMT+6
+        // CST
       </span>
     </span>
   );

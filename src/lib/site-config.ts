@@ -31,7 +31,7 @@ interface MetadataProps {
 }
 
 export function constructMetadata({
-  title = "Om Thakkar — Portfolio",
+  title = "Om Thakkar | Portfolio",
   description = siteConfig.description,
   image = siteConfig.ogImage,
   icons = "/favicon.ico",

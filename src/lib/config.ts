@@ -104,23 +104,23 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: "Homey",
     role: "Founder / CEO",
-    date: "Jan 2026 – Present",
+    date: "Jan 2026 - Present",
     description:
       "Built a real-time property marketplace with PostgreSQL on Railway, JWT-authenticated REST APIs, and an async ETL pipeline for 250+ university campuses with sub-second API latency.",
     logo: "/images/companies/homey.svg",
   },
   {
     company: "Polaris Inc.",
-    role: "Software Engineering Intern — WMS Team",
-    date: "Jun 2025 – Aug 2025",
+    role: "Software Engineering Intern, WMS Team",
+    date: "Jun 2025 - Aug 2025",
     description:
       "Developed a React Native app for real-time equipment tracking, built .NET REST APIs with PostgreSQL integration, and engineered a data validation pipeline processing thousands of records daily.",
     logo: "/images/companies/polaris.svg",
   },
   {
     company: "Polaris Inc.",
-    role: "Software Engineering Intern — Ecom Shop Team",
-    date: "May 2024 – Aug 2024",
+    role: "Software Engineering Intern, Ecom Shop Team",
+    date: "May 2024 - Aug 2024",
     description:
       "Refactored C# backend email validation with unit tests, executed frontend localization for multilingual support, and conducted A/B tests with custom debugging utilities.",
     logo: "/images/companies/polaris.svg",
@@ -133,9 +133,9 @@ export const EXPERIENCE: ExperienceItem[] = [
 
 export const EDUCATION: EducationItem[] = [
   {
-    institution: "University of Wisconsin–Madison",
-    degree: "B.S. Computer Science, Minor in Entrepreneurship — GPA 3.4",
-    period: "Expected May 2026",
+    institution: "University of Wisconsin-Madison",
+    degree: "B.S. Computer Science, Minor in Entrepreneurship",
+    period: "May 2026",
     logo: "/images/education/uw.svg",
   },
 ];

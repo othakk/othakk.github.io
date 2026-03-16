@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = constructMetadata({
-  title: "Om Thakkar — Portfolio",
+  title: "Om Thakkar | Portfolio",
   description: "CS student at UW-Madison. Founder @ Homey. Building things that matter.",
   icons: "/favicon.ico",
 });
