@@ -106,7 +106,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: "Founder / CEO",
     date: "Jan 2026 - Present",
     description:
-      "Built a real-time property marketplace with PostgreSQL on Railway, JWT-authenticated REST APIs, and an async ETL pipeline for 250+ university campuses with sub-second API latency.",
+      "Built a React Native, Flask, and PostgreSQL marketplace enabling real-time listing discovery across 250+ universities, sustaining 99% geocoding accuracy on 300+ listings via an async ETL engine with JWT-authed REST APIs, and prioritized expansion into 15 campuses by ranking 500 markets on live demand.",
     logo: "/images/companies/homey.svg",
   },
   {
@@ -114,7 +114,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: "Software Engineering Intern, WMS Team",
     date: "Jun 2025 - Aug 2025",
     description:
-      "Developed a React Native app for real-time equipment tracking, built .NET REST APIs with PostgreSQL integration, and engineered a data validation pipeline processing thousands of records daily.",
+      "Built an AI-powered natural-language analytics tool with .NET REST APIs and PostgreSQL that eliminated manual SQL for 30+ operations staff, cut AI query failures 40% with LLM-SQL validation workflows, and reduced data access time from hours to under a minute via secure execution pipelines.",
     logo: "/images/companies/polaris.svg",
   },
   {
@@ -122,7 +122,7 @@ export const EXPERIENCE: ExperienceItem[] = [
     role: "Software Engineering Intern, Ecom Shop Team",
     date: "May 2024 - Aug 2024",
     description:
-      "Refactored C# backend email validation with unit tests, executed frontend localization for multilingual support, and conducted A/B tests with custom debugging utilities.",
+      "Refactored C# email validation to eliminate edge-case failures, raised unit test coverage 45%, expanded reach to 1000+ global customers via multilingual frontend localization, ran A/B tests to lift conversion, and cut error-log noise 60% with custom debugging utilities.",
     logo: "/images/companies/polaris.svg",
   },
 ];
@@ -148,7 +148,7 @@ export const PROJECTS: ProjectItem[] = [
   {
     name: "Qualcomm Capstone",
     tagline:
-      "AI-powered public speaking coach using pose estimation, gaze detection, and on-device inference with QAIRT, ONNX Runtime & LiteRT.",
+      "AI public-speaking coach for Snapdragon PCs delivering real-time feedback via concurrent on-device pose, gaze, and facial-landmark inference, with a backend-agnostic layer auto-selecting QAIRT, ONNX Runtime, or LiteRT per device.",
     url: "",
     repo: "",
     image: "/images/projects/qualcomm.svg",
